@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+   "http://struts.apache.org/dtds/struts-2.5.dtd">
+ 
+<struts>
+
+  <!-- Change action path extension from .action to .html -->
+  <constant name="struts.action.extension" value="html"/>
+  
+  <!-- https://struts.apache.org/docs/wildcard-method-selection.html -->
+  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+  
+  <!-- Select simple theme of Struts  -->
+  <constant name="struts.ui.theme" value="simple" />
+  
+  <!-- Global properties file -->
+  <constant name="struts.custom.i18n.resources" value="global" />
+  
+  <!-- Actions -->
+  <package name="shop" namespace="/" extends="struts-default">
+    <!-- Interceptors -->
+    <interceptors>
+      <interceptor name="loginInterceptor" class="com.poly.interceptor.LoginInterceptor" />
+      <interceptor-stack name="loginStack">
+        <interceptor-ref name="loginInterceptor" />
+        <interceptor-ref name="defaultStack" />
+      </interceptor-stack>
+    </interceptors>
+
+    <!-- Index page -->
+    <action name="index" class="com.poly.action.IndexAction">
+      <result>/WEB-INF/pages/index.jsp</result>
+    </action>
+    
+    <!-- Login pages -->
+    <action name="login" class="com.poly.action.LoginAction" method="input">
+      <result name="input">/WEB-INF/pages/login.jsp</result>
+    </action>
+    
+    <action name="processLogin" class="com.poly.action.LoginAction">
+      <result name="success" type="redirectAction">index</result>
+      <result name="input">/WEB-INF/pages/login.jsp</result>
+    </action>
+    
+    <!-- Register pages -->
+    <action name="register" class="com.poly.action.RegisterAction" method="input">
+      <result name="input">/WEB-INF/pages/register.jsp</result>
+    </action>
+    
+    <action name="processRegister" class="com.poly.action.RegisterAction">
+      <result name="success" type="redirectAction">index</result>
+      <result name="input">/WEB-INF/pages/register.jsp</result>
+    </action>
+    
+    <!-- Logout page -->
+    <action name="logout" class="com.poly.action.LogoutAction">
+      <result name="success" type="redirectAction">index</result>
+    </action>
+
+
+    
+  </package>
+  
+</struts>
