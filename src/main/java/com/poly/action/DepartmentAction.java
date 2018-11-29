@@ -14,8 +14,6 @@ import java.util.List;
 
 public class DepartmentAction extends ActionSupport implements ModelDriven<Department> {
 
-    private static final long serialVersionUID = -6659925652584240539L;
-
     private Department department = new Department();
     private List<Department> departmentList = new ArrayList<Department>();
     private DepartmentDAO departmentDAO = new DepartmentDAOImpl();

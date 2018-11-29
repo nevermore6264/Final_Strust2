@@ -10,7 +10,8 @@
 <body>
 
 <s:include value="fragments/header.jsp"/>
-<h1>Hello</h1>
+
+
 
 <s:include value="fragments/footer.jsp"/>
 

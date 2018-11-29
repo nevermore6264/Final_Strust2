@@ -7,11 +7,9 @@ import com.poly.dao.ClassDAO;
 import com.poly.dao.ClassDAOImpl;
 import org.apache.struts2.ServletActionContext;
 import com.poly.entity.Class;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class ClassAction extends ActionSupport implements ModelDriven<Class> {
 

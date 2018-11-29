@@ -11,7 +11,7 @@ import java.util.Map;
 public class RegisterAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private String name;
 	private String email;
 	private String password;

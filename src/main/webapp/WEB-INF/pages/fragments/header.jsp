@@ -28,7 +28,7 @@
         <div class="navbar-header">
 
             <a class="navbar-brand home" href="<s:url action="index" />" data-animate-hover="bounce">
-                <img src="images/logo.png" style="width: 50px" alt="Obaju logo" class="hidden-xs"/>
+                <img src="images/logo.png" style="width: 50px" alt="Group 6 logo" class="hidden-xs"/>
                 <span class="sr-only">Six Group - go to homepage</span>
             </a>
 
