@@ -14,7 +14,7 @@ public class Department implements Serializable {
 
     @OneToMany(mappedBy = "department", fetch = FetchType.LAZY)
     @OrderBy("id DESC")
-    private Set<Student> products = new HashSet<Student>();
+    private Set<Student> students = new HashSet<Student>();
 
     public Department(int id, String name) {
         this.id = id;
@@ -40,11 +40,11 @@ public class Department implements Serializable {
         this.name = name;
     }
 
-    public Set<Student> getProducts() {
-        return products;
+    public Set<Student> getStudents() {
+        return students;
     }
 
-    public void setProducts(Set<Student> products) {
-        this.products = products;
+    public void setStudents(Set<Student> students) {
+        this.students = students;
     }
 }

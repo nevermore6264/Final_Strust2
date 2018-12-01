@@ -58,19 +58,47 @@
             <result name="success" type="redirectAction">index</result>
         </action>
 
-        <!--&lt;!&ndash;Class action&ndash;&gt;-->
-        <!--<action name="saveOrUpdateDepartment" method="saveOrUpdate" class="com.poly.action.DepartmentAction">-->
-            <!--<result name="success" type="redirect">listDepartment</result>-->
-        <!--</action>-->
-        <!--<action name="listDepartment" method="list" class="com.poly.action.DepartmentAction">-->
-            <!--<result name="success">/WEB-INF/pages/department.jsp</result>-->
-        <!--</action>-->
-        <!--<action name="editDepartment" method="edit" class="com.poly.action.DepartmentAction">-->
-            <!--<result name="success">/WEB-INF/pages/department.jsp</result>-->
-        <!--</action>-->
-        <!--<action name="deleteDepartment" method="delete" class="com.poly.action.DepartmentAction">-->
-            <!--<result name="success" type="redirect">listDepartment</result>-->
-        <!--</action>-->
+        <!--Department action-->
+        <action name="saveOrUpdateDepartment" method="saveOrUpdate" class="com.poly.action.DepartmentAction">
+            <result name="success" type="redirect">listDepartment</result>
+        </action>
+        <action name="listDepartment" method="list" class="com.poly.action.DepartmentAction">
+            <result name="success">/WEB-INF/pages/department.jsp</result>
+        </action>
+        <action name="editDepartment" method="edit" class="com.poly.action.DepartmentAction">
+            <result name="success">/WEB-INF/pages/department.jsp</result>
+        </action>
+        <action name="deleteDepartment" method="delete" class="com.poly.action.DepartmentAction">
+            <result name="success" type="redirect">listDepartment</result>
+        </action>
+
+        <!--Province action-->
+        <action name="saveOrUpdateProvince" method="saveOrUpdate" class="com.poly.action.ProvinceAction">
+            <result name="success" type="redirect">listProvince</result>
+        </action>
+        <action name="listProvince" method="list" class="com.poly.action.ProvinceAction">
+            <result name="success">/WEB-INF/pages/province.jsp</result>
+        </action>
+        <action name="editProvince" method="edit" class="com.poly.action.ProvinceAction">
+            <result name="success">/WEB-INF/pages/province.jsp</result>
+        </action>
+        <action name="deleteProvince" method="delete" class="com.poly.action.ProvinceAction">
+            <result name="success" type="redirect">listProvince</result>
+        </action>
+
+        <!--Class action-->
+        <action name="saveOrUpdateClass" method="saveOrUpdate" class="com.poly.action.ClassAction">
+            <result name="success" type="redirect">listClass</result>
+        </action>
+        <action name="listClass" method="list" class="com.poly.action.ClassAction">
+            <result name="success">/WEB-INF/pages/class.jsp</result>
+        </action>
+        <action name="editClass" method="edit" class="com.poly.action.ClassAction">
+            <result name="success">/WEB-INF/pages/class.jsp</result>
+        </action>
+        <action name="deleteClass" method="delete" class="com.poly.action.ClassAction">
+            <result name="success" type="redirect">class</result>
+        </action>
     </package>
 
 </struts>
